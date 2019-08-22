@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-elements',
@@ -8,6 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class ElementsComponent implements OnInit {
 
   constructor() { }
+
+  userForm = new FormGroup({
+    name: new FormControl(''),
+    age: new FormControl(''),
+  });
+
+  onSubmit(): void {
+    console.warn(this.userForm.value);
+  }
 
   ngOnInit() {
   }

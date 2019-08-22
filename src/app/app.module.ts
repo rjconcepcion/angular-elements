@@ -3,14 +3,14 @@ import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements'
 import { AppComponent } from './app.component';
 import { ElementsComponent } from './elements/elements.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
-    AppComponent,
     ElementsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   entryComponents:[
